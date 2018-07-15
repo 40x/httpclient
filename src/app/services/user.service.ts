@@ -12,7 +12,7 @@ export class UserService {
 
   getUsers(): Observable<User[]> {
     return this.http
-      .get<User[]>('https://jsonplaceholder.typicode.com/users')
+      .get<User[]>('/api/users')
       .pipe(map((users: User[]) => users.map(user => new User(user))));
   }
 }
